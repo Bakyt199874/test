@@ -1,0 +1,17 @@
+{% if messages %}
+
+    {% for message in messages %}
+    <div class="alert m-0 alert-{{ message.tags }}" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+{% endif %}
+
+
+{% comment %}
+messages.debug(request, '%s SQL statements were executed.' % count)
+messages.info(request, 'Сиздин эсебиңизде үч кредит калды.')
+messages.success(request, 'Профиль чоо-жайы жаңырды.')
+messages.warning(request, 'Каттоо эсебиңиздин мөөнөтү үч күндөн кийин бүтөт.')
+messages.error(request, 'Документ өчүрүлдү.')
+{% endcomment %}
